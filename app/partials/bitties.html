@@ -1,1 +1,5 @@
 Bitties Page
+<div ng-repeat="menu in menus">
+    <a href="#{{ menu.location }}" class="{{ menu.class }}" ng-click="active='{{menu.class}}'">{{menu.label}}</a>
+  </div>
+  :(

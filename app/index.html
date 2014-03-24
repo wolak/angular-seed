@@ -15,6 +15,14 @@
     <a href="#sports" class="sports" ng-click="active='sports'">Sports</a>
     <a href="#notes" class="notes" ng-click="active='notes'">Notes</a>
   </nav>
+  <div>WTF {{menus.length}}</div>
+  <div ng-repeat="menu in menus">
+    <a href="#{{ menu.location }}" class="{{ menu.class }}" ng-click="active='{{menu.class}}'">{{menu.label}}</a>
+  </div>
+   <li ng-repeat="phone in phones | filter:query | orderBy:orderProp">
+      {{phone.name}}
+      <p>{{phone.snippet}}</p>
+    </li>
   <!-- ng-show will show an element if the value in the quotes is truthful,
        while ng-hide does the opposite. Because the active variable is not set
        initially, this will cause the first paragraph to be visible. -->
