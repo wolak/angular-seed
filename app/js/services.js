@@ -18,10 +18,7 @@ angular.module('myApp.services', []).factory('notify', ['$window', function(win)
 			msgs = [];
 		}
     };
-  }]);
-//This is a service because it will be new-ed
-/* TODO: figure out why name space conflict here*/
-angular.module('myApp.services1', []).service('roomiesinputmodel', function(){
+  }]).service('roomiesinputmodel', function(){
 	return function(json) {
 	    json = json || {};
 	    this.inputval = json.inputval || "something";
