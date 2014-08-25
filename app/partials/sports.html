@@ -1,3 +1,29 @@
-Sports Page
- <div ng-include src='"partials/bitties.html"' ng-controller='MyCtrl1'></div>
- Done
+
+<div ng-include src='"partials/bitties.html"'></div>
+ARE YOU GAY?<input ng-change="getStuff()" ng-model="company.code">
+<br>
+<img ng-src="{{homolink}}"/>
+<br>
+{{company.homo}}
+<br>
+<br>
+This is a test of my notify service
+<input ng-init="message='test'" ng-model="message" >
+  <button ng-click="callNotify(message);">NOTIFY</button>
+  <input ng-init="message1='test'" ng-model="message1" >
+  <button ng-click="callNotify(message1);">NOTIFY</button>
+
+<div>
+	Rating is {{rating}} <br/>
+	This one is not readonly, but doesnt save to server
+	<div fundoo-rating rating-value="rating" max="10"></div>
+	<br>
+	<br>
+	This one is not readonly, saves to server
+	<div fundoo-rating rating-value="rating" max="10" on-rating-selected="saveRatingToServer(newRating)"></div>
+	<br>
+	<br>
+	Read only, doesnt save
+	<div fundoo-rating rating-value="rating" max="10" readonly="true"></div>
+	<button ng-click="rating = 7">Change rating to 7</button>
+</div>

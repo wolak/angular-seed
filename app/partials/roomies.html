@@ -1,0 +1,9 @@
+Hello friend! do you want to add a new record?
+<button ng-click="friends()">Button</button>
+    <div ng-repeat="ww in w.inputs">
+        <div class="">Input #{{ $index+1 }}</div>
+        <div>
+      		<input type='text' data-ng-model="ww.inputwas" />
+        </div>
+        <a ng-click="remove(ww)">Remove</a>
+    </div>

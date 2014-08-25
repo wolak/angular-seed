@@ -2,38 +2,24 @@
 <html lang="en" ng-app="myApp">
 <head>
   <meta charset="utf-8">
-  <title>My AngularJS App</title>
+  <title>Paul's Baws Site</title>
   <link rel="stylesheet" href="css/app.css"/>
 </head>
 <body>
 <div id="main">
-<!-- The navigation menu will get the value of the "active" variable as a class. -->
-  <nav class="{{active}}" >
-    <!-- When a link in the menu is clicked, we set the active variable -->
-    <a href="#home" class="home" ng-click="active='home'">Home</a>
-    <a href="#bitties" class="bitties" ng-click="active='bitties'">Bitties</a>
-    <a href="#sports" class="sports" ng-click="active='sports'">Sports</a>
-    <a href="#notes" class="notes" ng-click="active='notes'">Notes</a>
+<!-- The navigation menu will get the value of the "mymenu" variable as a class. -->
+  <nav class="{{mymenu}}" >
+    <!-- When a link in the menu is clicked, we set the mymenu variable -->
+    <a href="#home" class="home" ng-click="mymenu='home'">Home</a>
+    <a href="#bitties" class="bitties" ng-click="mymenu='bitties'">Bitties</a>
+    <a href="#sports" class="sports" ng-click="mymenu='sports'">Sports</a>
+    <a href="#notes" class="notes" ng-click="mymenu='notes'">Notes</a>
+    <a href="#roomies" class="roomies" ng-click="mymenu='roomies'">Roomies</a>
   </nav>
-  <div>WTF {{menus.length}}</div>
-  <div ng-repeat="menu in menus">
-    <a href="#{{ menu.location }}" class="{{ menu.class }}" ng-click="active='{{menu.class}}'">{{menu.label}}</a>
-  </div>
-   <li ng-repeat="phone in phones | filter:query | orderBy:orderProp">
-      {{phone.name}}
-      <p>{{phone.snippet}}</p>
-    </li>
-  <!-- ng-show will show an element if the value in the quotes is truthful,
-       while ng-hide does the opposite. Because the active variable is not set
-       initially, this will cause the first paragraph to be visible. -->
-
-    <p ng-hide="active">Please click a menu item</p>
-    <p ng-show="active">You chose <b>{{active}}</b></p>
+    <p ng-hide="mymenu">Please click a menu item</p>
+    <p ng-show="mymenu">You chose <b>{{mymenu}}</b></p>
 </div>
-
   <div ng-view></div>
-
- <!-- <div>Angular seed app: v<span app-version></span></div>-->
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular/angular-route.js"></script>
   <script src="js/app.js"></script>

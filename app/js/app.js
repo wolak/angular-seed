@@ -14,7 +14,8 @@ config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/bitties', {templateUrl: 'partials/bitties.html', controller: 'MyCtrl1'});
   $routeProvider.when('/sports', {templateUrl: 'partials/sports.html', controller: 'MyCtrl1'});
   $routeProvider.when('/notes', {templateUrl: 'partials/notes.html', controller: 'MyCtrl1'});
-  //$routeProvider.otherwise({redirectTo: '/view1'});
+  $routeProvider.when('/roomies', {templateUrl: 'partials/roomies.html', controller: 'roomiesCtrl'});
+  $routeProvider.otherwise({redirectTo: '/home'});
 }]);
 
 
