@@ -30,10 +30,19 @@ angular.module('myApp.controllers', []).
 	}]).
 	controller('roomiesCtrl', ['$scope', 'roomiesinputmodel', function($scope, roomiesinputmodel){
 		$scope.friends = function(){
-			var a = new roomiesinputmodel();
-			console.log(a);
+			var addMe = new roomiesinputmodel();
+			$scope.mydata.inputs.push(addMe);
 		};
-		$scope.w = {
+		$scope.mydata = {
 	        inputs: [new roomiesinputmodel()]
+	    };
+	    $scope.remove = function(thingToRemove) {
+       		var index = $scope.mydata.inputs.indexOf(thingToRemove);
+	        if( index >= 0 ) {
+	            $scope.mydata.inputs.splice(index,1);
+	        }
+	    };
+	    $scope.submitRoomieInputs = function(){
+	    	console.log("submitRoomieInputs",$scope.mydata);
 	    };
 	}])

@@ -21,7 +21,7 @@ angular.module('myApp.services', []).factory('notify', ['$window', function(win)
   }]).service('roomiesinputmodel', function(){
 	return function(json) {
 	    json = json || {};
-	    this.inputval = json.inputval || "something";
-	    this.inputwas = json.inputwas || "Enter Input";
+	    this.item_desc = json.item_desc || null;
+	    this.amount = json.amount || null;
 	}
 }); 

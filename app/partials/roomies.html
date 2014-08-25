@@ -1,9 +1,18 @@
-Hello friend! do you want to add a new record?
-<button ng-click="friends()">Button</button>
-    <div ng-repeat="ww in w.inputs">
-        <div class="">Input #{{ $index+1 }}</div>
-        <div>
-      		<input type='text' data-ng-model="ww.inputwas" />
-        </div>
-        <a ng-click="remove(ww)">Remove</a>
+<div>
+	<div>
+		<label>Your name: </label> <input style="margin-left: 21px;" type='text' data-ng-model="mydata.username" />
+	</div>
+	<button class="paulsButton" ng-click="friends()">New Receipt</button>
+	<br>
+    <div ng-repeat="ww in mydata.inputs">
+	 	<div>
+	 		<label>Item: </label> <input style="margin-left: 21px;" type='text' data-ng-model="ww.item_desc" />
+	 	</div>
+  		<div>
+  			<label>Amount:</label><input type='text' data-ng-model="ww.amount" />
+  		</div>
+    	<a ng-click="remove(ww)">Remove</a>
+    	<br>
     </div>
+    <button class="paulsButton" ng-click="submitRoomieInputs()">Submit to Server</button>
+</div>
